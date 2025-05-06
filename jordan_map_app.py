@@ -17,7 +17,7 @@ st.set_page_config(page_title="Jordan Disease Map", layout="wide")
 st.title("🗺️ Jordan District Disease Map - 2024")
 
 # --- GEMINI SETUP ---
-genai.configure(api_key=os.getenv("gemKey"))  # Load the key from the .env file
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))  # Load the key from the .env file
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # --- MAIN CODE ---

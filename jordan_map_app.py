@@ -22,7 +22,7 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 # --- MAIN CODE ---
 try:
-    df = pd.read_csv("data.csv")
+    df = pd.read_csv("data.csv", encoding="utf-8")
     df["geometry"] = df["geometry"].apply(wkt.loads)
     gdf = gpd.GeoDataFrame(df, geometry="geometry", crs="EPSG:4326")
 
